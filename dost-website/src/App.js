@@ -20,7 +20,13 @@ const App = () => (
             path="/"
             element={
               <>
-                <Banner />
+               <Banner 
+  title="A PET-FIRST APPROACH TO WELLNESS FOR MORE NEWS"
+  subtitle="Available in select states"
+  linkText="Learn More"
+  linkHref="https://globalnews.ca/tag/pet-wellness/" 
+/>
+
                 <Categories />
                 <Services />
                 <Reviews />

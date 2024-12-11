@@ -1,12 +1,10 @@
 import React from 'react';
 
-const Banner = () => (
+const Banner = ({title,subtitle,linkText,linkHref}) => (
   <section >
     <div>
-      <h2>Available in select states</h2>
-      <h1>
-        A PET-FIRST APPROACH TO WELLNESS <br /> FOR MORE NEWS
-      </h1>
+      <h2>{subtitle}</h2>
+      <h1>{title}  </h1>
       <a href="https://globalnews.ca/tag/pet-wellness/" >
         Learn More
       </a>

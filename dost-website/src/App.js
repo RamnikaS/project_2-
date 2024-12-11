@@ -54,5 +54,12 @@ const categories = [
 
 // Use in App.js
 <Categories categories={categories} />
+const reviews = [
+  { image: 'https://encrypted-tbn0.gstatic.com/...', text: 'Excellent advice on pet food!' },
+  { image: 'https://cdn.pixabay.com/...', text: 'Great grooming services!' },
+];
+
+// Use in App.js
+<Reviews reviews={reviews} />
 
 export default App;

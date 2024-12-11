@@ -44,5 +44,15 @@ const App = () => (
     </div>
   </Router>
 );
+const categories = [
+  { name: 'Cat', image: 'https://encrypted-tbn0.gstatic.com/.../cat.jpg' },
+  { name: 'Dog', image: 'https://cdn.pixabay.com/.../dog.jpg' },
+  { name: 'Fish', image: 'https://static.scientificamerican.com/.../fish.jpg' },
+  { name: 'Bird', image: 'https://www.cdc.gov/.../bird.jpg' },
+  { name: 'Rabbit', image: 'https://images.pexels.com/.../rabbit.jpg' },
+];
+
+// Use in App.js
+<Categories categories={categories} />
 
 export default App;

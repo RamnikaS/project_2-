@@ -9,7 +9,8 @@ const Banner = ({ title, description, linkText, linkUrl, imgSrc }) => (
       </h1>
       <a href={linkUrl}>{linkText}</a>
     </div>
-    <img src={imgSrc} alt="Dog Jasper" />
+    <img src="/Dog landing Page-02.jpg"
+ alt="Dog Jasper" />
   </section>
 );
 

@@ -55,7 +55,7 @@ const App = () => {
                     description="For More News"
                     linkText="Learn More"
                     linkUrl="https://globalnews.ca/tag/pet-wellness/"
-                    imgSrc="./Dog landing Page-02.jpg"
+                    imgSrc="/Dog landing Page-02.jpg"
                   />
                   <Categories categories={categories} />
                   <Services />

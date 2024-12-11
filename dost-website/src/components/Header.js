@@ -10,7 +10,7 @@ const Header = ({ navLinks }) => {
 
   return (
     <header>
-      <img src="./Dost Logo-02.png" alt="Pet-First Logo" />
+      <img src="/Dost Logo-01.png" alt="Pet-First Logo" />
       <nav>
         <ul className={isMenuOpen ? 'open' : ''}>
           {navLinks.map((link, index) => (

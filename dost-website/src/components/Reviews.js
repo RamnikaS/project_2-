@@ -2,7 +2,7 @@ import React from 'react';
 
 const Reviews = () => (
   <section>
-    <div >
+    <div>
       <img
         src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTa94mTNTVWxgkIpAv6qFWni_WOmGr4UYZfPw&s"
         alt="Customer"
@@ -12,7 +12,7 @@ const Reviews = () => (
         "The staff at Pet-First provided excellent advice on pet food. Highly
         recommended!"
       </p>
-      <div >
+      <div>
         <button>&lt;</button>
         <button>&gt;</button>
       </div>
@@ -21,3 +21,4 @@ const Reviews = () => (
 );
 
 export default Reviews;
+

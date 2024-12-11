@@ -11,38 +11,65 @@ import Footer from './components/Footer';
 import './App.css';
 
 const App = () => {
-  const [categoriesData] = React.useState([
-    { imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJouKzHN5Hbvgem0D19pI-6qCfjWkDZ7Qc6A&s", altText: "Cat" },
-    { imageUrl: "https://cdn.pixabay.com/photo/2014/11/30/14/11/cat-551554_1280.jpg", altText: "Dog" },
-    { imageUrl: "https://static.scientificamerican.com/sciam/cache/file/2AE14CDD-1265-470C-9B15F49024186C10_source.jpg?w=1200", altText: "Fish" },
-    { imageUrl: "https://www.cdc.gov/healthy-pets/media/images/2024/04/GettyImages-598175960-cute-dog-headshot.jpg", altText: "Bird" },
-    { imageUrl: "https://images.pexels.com/photos/160846/french-bulldog-summer-smile-joy-160846.jpeg?cs=srgb&dl=pexels-pixabay-160846.jpg&fm=jpg", altText: "Rabbit" }
-  ]);
+  const navLinks = [
+    { path: '/', text: 'Home' },
+    { path: '/medicare', text: 'Medicare' },
+    { path: '/blog', text: 'Blog' },
+    { path: '/signup', text: 'Sign Up' }
+  ];
+
+  const footerLinks = [
+    { path: '/about', text: 'About' },
+    { path: '/projects', text: 'Projects' },
+    { path: '/services', text: 'Services' },
+    { path: '/clients', text: 'Clients' },
+    { path: '/blog', text: 'Blog' },
+    { path: '/contact', text: 'Contact' }
+  ];
+
+  const categories = [
+    { name: 'Cat', imgUrl: 'https://example.com/cat.jpg' },
+    { name: 'Dog', imgUrl: 'https://example.com/dog.jpg' },
+    { name: 'Fish', imgUrl: 'https://example.com/fish.jpg' },
+    { name: 'Bird', imgUrl: 'https://example.com/bird.jpg' },
+    { name: 'Rabbit', imgUrl: 'https://example.com/rabbit.jpg' }
+  ];
+
+  const reviews = [
+    { img: 'https://example.com/review1.jpg', text: "Great products and service!" },
+    { img: 'https://example.com/review2.jpg', text: "My pet loves the food!" }
+  ];
 
   return (
     <Router>
       <div className="app">
-        <Header />
+        <Header navLinks={navLinks} />
         <main>
           <Routes>
             <Route
               path="/"
               element={
                 <>
-                  <Banner />
-                  <Categories categories={categoriesData} />
+                  <Banner 
+                    title="A PET-FIRST APPROACH TO WELLNESS" 
+                    description="For More News"
+                    linkText="Learn More"
+                    linkUrl="https://globalnews.ca/tag/pet-wellness/"
+                    imgSrc="./Dog landing Page-02.jpg"
+                  />
+                  <Categories categories={categories} />
                   <Services />
-                  <Reviews />
-                  <Subscribe />
+                  <Reviews reviews={reviews} />
+                  <Subscribe placeholderText="Enter your email" buttonText="Subscribe" />
                 </>
               }
             />
           </Routes>
         </main>
-        <Footer />
+        <Footer footerLinks={footerLinks} />
       </div>
     </Router>
   );
-}
+};
 
 export default App;

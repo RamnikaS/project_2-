@@ -1,18 +1,17 @@
 import React from 'react';
 
-const Banner = () => (
-  <section >
+const Banner = ({ title, description, linkText, linkUrl, imgSrc }) => (
+  <section>
     <div>
-      <h2>Available in select states</h2>
+      <h2>{title}</h2>
       <h1>
-        A PET-FIRST APPROACH TO WELLNESS <br /> FOR MORE NEWS
+        {description}
       </h1>
-      <a href="https://globalnews.ca/tag/pet-wellness/" >
-        Learn More
-      </a>
+      <a href={linkUrl}>{linkText}</a>
     </div>
-    <img src="./Dog landing Page-02.jpg" alt="Dog Jasper"/>
+    <img src={imgSrc} alt="Dog Jasper" />
   </section>
 );
 
 export default Banner;
+

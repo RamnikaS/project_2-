@@ -10,56 +10,39 @@ import Footer from './components/Footer';
 
 import './App.css';
 
-const App = () => (
-  <Router>
-    <div className="app">
-      <Header />
-      <main>
-        <Routes>
-          <Route
-            path="/"
-            element={
-              <>
-               <Banner 
-  title="A PET-FIRST APPROACH TO WELLNESS FOR MORE NEWS"
-  subtitle="Available in select states"
-  linkText="Learn More"
-  linkHref="https://globalnews.ca/tag/pet-wellness/" 
-/>
+const App = () => {
+  const [categoriesData] = React.useState([
+    { imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJouKzHN5Hbvgem0D19pI-6qCfjWkDZ7Qc6A&s", altText: "Cat" },
+    { imageUrl: "https://cdn.pixabay.com/photo/2014/11/30/14/11/cat-551554_1280.jpg", altText: "Dog" },
+    { imageUrl: "https://static.scientificamerican.com/sciam/cache/file/2AE14CDD-1265-470C-9B15F49024186C10_source.jpg?w=1200", altText: "Fish" },
+    { imageUrl: "https://www.cdc.gov/healthy-pets/media/images/2024/04/GettyImages-598175960-cute-dog-headshot.jpg", altText: "Bird" },
+    { imageUrl: "https://images.pexels.com/photos/160846/french-bulldog-summer-smile-joy-160846.jpeg?cs=srgb&dl=pexels-pixabay-160846.jpg&fm=jpg", altText: "Rabbit" }
+  ]);
 
-                <Categories />
-                <Services />
-                <Reviews />
-                <Subscribe />
-              </>
-            }
-          />
-          {/* <Route path="/categories" element={<Categories />} />
-          <Route path="/services" element={<Services />} />
-          <Route path="/reviews" element={<Reviews />} />
-          <Route path="/subscribe" element={<Subscribe />} /> */}
-        </Routes>
-      </main>
-      <Footer />
-    </div>
-  </Router>
-);
-const categories = [
-  { name: 'Cat', image: 'https://encrypted-tbn0.gstatic.com/.../cat.jpg' },
-  { name: 'Dog', image: 'https://cdn.pixabay.com/.../dog.jpg' },
-  { name: 'Fish', image: 'https://static.scientificamerican.com/.../fish.jpg' },
-  { name: 'Bird', image: 'https://www.cdc.gov/.../bird.jpg' },
-  { name: 'Rabbit', image: 'https://images.pexels.com/.../rabbit.jpg' },
-];
-
-// Use in App.js
-<Categories categories={categories} />
-const reviews = [
-  { image: 'https://encrypted-tbn0.gstatic.com/...', text: 'Excellent advice on pet food!' },
-  { image: 'https://cdn.pixabay.com/...', text: 'Great grooming services!' },
-];
-
-// Use in App.js
-<Reviews reviews={reviews} />
+  return (
+    <Router>
+      <div className="app">
+        <Header />
+        <main>
+          <Routes>
+            <Route
+              path="/"
+              element={
+                <>
+                  <Banner />
+                  <Categories categories={categoriesData} />
+                  <Services />
+                  <Reviews />
+                  <Subscribe />
+                </>
+              }
+            />
+          </Routes>
+        </main>
+        <Footer />
+      </div>
+    </Router>
+  );
+}
 
 export default App;

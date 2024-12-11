@@ -1,15 +1,16 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+
 const Footer = () => (
   <footer>
-    <div >
-      <nav >
-      <Link >About</Link>
-        <Link >Projects</Link>
-        <Link >Services</Link>
-        <Link >Clients</Link>
-        <Link >Blog</Link>
-        <Link >Contact</Link>
+    <div>
+      <nav>
+        <Link to="#">About</Link>
+        <Link to="#">Projects</Link>
+        <Link to="#">Services</Link>
+        <Link to="#">Clients</Link>
+        <Link to="#">Blog</Link>
+        <Link to="#">Contact</Link>
       </nav>
     </div>
     <p>&copy; 2024 Dost. All rights reserved.</p>
@@ -17,3 +18,4 @@ const Footer = () => (
 );
 
 export default Footer;
+

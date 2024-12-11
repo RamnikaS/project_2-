@@ -1,16 +1,15 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const Footer = () => (
+const Footer = ({ footerLinks }) => (
   <footer>
     <div>
       <nav>
-        <Link to="#">About</Link>
-        <Link to="#">Projects</Link>
-        <Link to="#">Services</Link>
-        <Link to="#">Clients</Link>
-        <Link to="#">Blog</Link>
-        <Link to="#">Contact</Link>
+        {footerLinks.map((link, index) => (
+          <Link key={index} to={link.path}>
+            {link.text}
+          </Link>
+        ))}
       </nav>
     </div>
     <p>&copy; 2024 Dost. All rights reserved.</p>
@@ -18,4 +17,3 @@ const Footer = () => (
 );
 
 export default Footer;
-
